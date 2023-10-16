@@ -6,8 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hóesés</title>
     <script>
-        document.write("Ezt a javascript írta.")
+        document.write("Ezt a javascript írta."+"<br>")
         console.log("Kiírás a consolera.")
+        var a = 23
+        var b = 3.14
+        var nev = "Liza"
+        var vane = true;
+        //műveletek
+        var c = a+b
+        document.write("összeadás: "+c+"<br>")
+
+        //tömb
+        var szamok = [1,7,22,6]
+        var i
+        for (i = 0; i< szamok.length; i++){
+            document.write("szamok: "+szamok[i]+"<br>")
+        }
+
+        //tömbelemek összege
+        var osszeg = 0;
+        for (i = 0; i< szamok.length; i++){
+            osszeg+=szamok[i]
+        }
+        document.write("összeg: "+osszeg + "<br>")
+        // 3al osztható páros szám
+        var dbszam = 0;
+        for (i = 0; i< szamok.length; i++){
+            if(szamok[i] % 2 === 0 && szamok[i]%3 === 0){
+                dbszam++
+            }
+        }
+        document.write("oszthatók száma:"+dbszam+"<br>")
+
+        // legnagyobb
+        var max = szamok[0]
+        for (i = 0; i< szamok.length; i++){
+            if(max < szamok[i]){
+                max=szamok[i]
+            }
+        }
+        document.write("max: "+max +"<br>")
+
+        //beépített metódusok
+        var most = new Date()
+        document.write(most+"<br>")
+
+        document.write(most.getMonth() +"<br>")
+        document.write(most.getDay()+"<br>")
+
+
     </script>
 </head>
 <body>

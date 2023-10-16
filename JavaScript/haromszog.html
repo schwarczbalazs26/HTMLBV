@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function szamol() {
+            event.preventDefault()
+            var a = document.getElementById("alap").value
+            var ma = document.getElementById("magassag").value
+            var terulet = (a*ma)/2
+            document.getElementById("kiir").innerHTML = "A háromszög területe: "+terulet
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="alap">Alap:</label>
+        <input type="text" placeholder="alap" id="alap" value="" input autocomplete="off">
+        <label for="magassag">Magassag:</label>
+        <input type="text" placeholder="magassag" id="magassag" value="" input autocomplete="off">
+        <button onclick="szamol()">Szamolas</button>
+        <p id="kiir">A háromszög területe:</p>
+    </form>
+
+</body>
+
+</html>
